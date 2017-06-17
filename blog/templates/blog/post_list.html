@@ -5,7 +5,14 @@
 </head>
 <body>
 <p>
-<b>This is my first web app using Django.This site will be updated soon....Check back later...!</b>
+<b>My Blog App</b><br>
+{% for post in posts%}
+	<div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 </p>
 </body>
 </html>
